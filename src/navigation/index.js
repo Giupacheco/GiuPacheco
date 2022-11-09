@@ -1,18 +1,18 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-//import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Paginicial } from "../screens/Paginicial";
 
 import { Produtos } from "../screens/Produtos";
-import { Noticias } from "../screens/Noticias";
+import { Contato } from "../screens/Contato";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { Sobre } from "../screens/sobre";
+import { Login } from "../screens/Contato";
 
 //const Stack = createNativeStackNavigator();
 const MBNav = createMaterialBottomTabNavigator();
 
 export const GPRootNavigation = () => {
   return (
-    <MBNav.Navigator activeColor="#fff" inactiveColor="rgba(255,255,255,0.5)">
+    <MBNav.Navigator activeColor="#AC2F45" inactiveColor="#E68292" barStyle={{ backgroundColor: "black"}}>
       <MBNav.Screen
         name="Página Inicial"
         component={Paginicial}
@@ -39,17 +39,17 @@ export const GPRootNavigation = () => {
         options={{
           tabBarLabel: "Produtos",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="phone" color={color} size={26} />
+            <MaterialCommunityIcons name="cart" color={color} size={26} />
           ),
         }}
       />
       <MBNav.Screen
-        name="Notícias"
-        component={Noticias}
+        name="Contato"
+        component={Login}
         options={{
-          tabBarLabel: "Notícias",
+          tabBarLabel: "Contato",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="android" color={color} size={26} />
+            <MaterialCommunityIcons name="phone" color={color} size={26} />
           ),
         }}
       />

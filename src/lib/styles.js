@@ -13,5 +13,13 @@ export const styles = StyleSheet.create({
     },
     red: {
         color: 'red',
-    }
+    },
+    imagem:{
+    height: 200,
+    width: 500,
+    },
+    text:{
+        textAlign: "center",
+        margin: 100,
+    },
 })
